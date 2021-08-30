@@ -6,6 +6,7 @@
 // - Lights
 
 console.log(process.env.API_KEY);
+const orbit = require("three-orbitcontrols");
 
 const THREE = require("three");
 
@@ -104,6 +105,8 @@ let cube = createCube();
 let sphere = createSphere();
 let light = createLight();
 let lightHelper = createLightHelper(light);
+
+let conttols = new orbit(camera, renderer.domElement);
 
 light.position.x = 10;
 light.position.y = 10;
